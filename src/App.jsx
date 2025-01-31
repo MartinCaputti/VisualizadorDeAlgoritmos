@@ -43,13 +43,7 @@ const App = () => {
       "El algoritmo de ordenamiento por mezcla divide el array en mitades, las ordena recursivamente, y luego mezcla los sub-arrays ordenados para producir un array completamente ordenado."
     );
     setIsSorting(true);
-    const sortedArray = await mergeSort(
-      [...array],
-      setArray,
-      speed,
-      setHighlightedIndices
-    );
-    setArray(sortedArray);
+    await mergeSort([...array], setArray, speed, setHighlightedIndices);
     setIsSorting(false);
     setHighlightedIndices([]);
   };

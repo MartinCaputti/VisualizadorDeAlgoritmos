@@ -57,8 +57,8 @@ export async function mergeSort(array, updateArray, speed, updateHighlight) {
     );
   };
 
-  // Aseguramos que el array no esté vacío
   if (array && array.length > 0) {
     await mergeSortRecursive(0, array.length - 1);
+    updateArray([...array]); // Aseguramos la actualización final del array
   }
 }
