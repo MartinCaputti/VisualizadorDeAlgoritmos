@@ -1,5 +1,5 @@
 // src/algoritmos/mergeSort.js
-export async function mergeSort(array, updateArray, speed, updateHighlight) {
+export async function mergeSort(array, updateArray, speedRef, updateHighlight) {
   const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
   const merge = async (left, right, start, mid, end) => {
@@ -9,7 +9,7 @@ export async function mergeSort(array, updateArray, speed, updateHighlight) {
 
     while (i < left.length && j < right.length) {
       updateHighlight([start + i, mid + 1 + j]);
-      await sleep(100 - speed);
+      await sleep(100 - speedRef.current);
 
       if (left[i] < right[j]) {
         sortedArray.push(left[i]);
@@ -34,7 +34,7 @@ export async function mergeSort(array, updateArray, speed, updateHighlight) {
       array[k] = sortedArray[k - start];
       updateArray([...array]);
       updateHighlight([k]);
-      await sleep(100 - speed);
+      await sleep(100 - speedRef.current);
     }
 
     updateHighlight([]);
@@ -59,6 +59,6 @@ export async function mergeSort(array, updateArray, speed, updateHighlight) {
 
   if (array && array.length > 0) {
     await mergeSortRecursive(0, array.length - 1);
-    updateArray([...array]); // Aseguramos la actualización final del array
+    updateArray([...array]);
   }
 }

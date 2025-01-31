@@ -1,4 +1,3 @@
-// src/components/Controls.jsx
 import React from "react";
 import "./Controls.css"; // Importando la hoja de estilo
 
@@ -7,6 +6,8 @@ const Controls = ({
   onBubbleSort,
   onMergeSort,
   onQuickSort,
+  onSelectionSort,
+  onInsertionSort,
   onSpeedChange,
   onSizeChange,
   arraySize,
@@ -22,13 +23,19 @@ const Controls = ({
         Ordenamiento Burbuja
       </button>
       <button onClick={onMergeSort} disabled={isSorting}>
-        Ordenamiento por mezcla
+        Ordenamiento por Mezcla
       </button>
       <button onClick={onQuickSort} disabled={isSorting}>
         Quicksort
       </button>
+      <button onClick={onSelectionSort} disabled={isSorting}>
+        Ordenamiento por Selección
+      </button>
+      <button onClick={onInsertionSort} disabled={isSorting}>
+        Ordenamiento por Inserción
+      </button>
       <label>
-        Tamaño:
+        Tamaño ({arraySize} barras):
         <input
           type="range"
           min="10"
@@ -39,14 +46,13 @@ const Controls = ({
         />
       </label>
       <label>
-        Velocidad:
+        Velocidad ({100 - speed} ms):
         <input
           type="range"
           min="1"
           max="100"
           value={speed}
-          onChange={onSpeedChange}
-          disabled={isSorting}
+          onChange={onSpeedChange} // Permitir cambios de velocidad mientras se ejecuta
         />
       </label>
     </div>

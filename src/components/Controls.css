@@ -13,12 +13,17 @@
   margin: 10px;
   padding: 10px 20px;
   font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  background-color: #007bff;
-  color: white;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: rgb(35, 57, 94) 0px 0px 15px 3px inset;
+  border-radius: 17px;
+  border: 1px solid rgb(31, 47, 71);
+  display: inline-block;
   cursor: pointer;
-  transition: background-color 0.3s;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  text-shadow: rgb(38, 54, 102) 0px 1px 0px;
+  background: linear-gradient(rgb(65, 89, 137) 5%, rgb(46, 70, 110) 100%)
+    rgb(65, 89, 137);
 }
 
 .controls-container button:disabled,
@@ -30,6 +35,7 @@
 .controls-container button:hover:not(:disabled),
 .controls-container input[type="range"]:hover:not(:disabled) {
   background-color: #0056b3;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Añadir sombra */
 }
 
 .controls-container input[type="range"] {
@@ -63,4 +69,45 @@
   flex-direction: column;
   align-items: center;
   margin: 10px 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* From Uiverse.io by PriyanshuGupta28 */
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #4c00ff;
+  background-image: linear-gradient(160deg, #4900f5 0%, #80d0c7 100%);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  cursor: pointer;
 }
