@@ -2,8 +2,10 @@
 .controls-container {
   display: flex;
   flex-direction: column; /* Disposición vertical */
-  align-items: center; /* Centramos los elementos horizontalmente */
+  align-items: center; /* Centrar horizontalmente */
   margin-top: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .controls-container button,
@@ -13,8 +15,8 @@
   font-size: 16px;
   border: none;
   border-radius: 5px;
-  background-color: #007bff; /* Color del botón */
-  color: white; /* Color del texto */
+  background-color: #007bff;
+  color: white;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -54,4 +56,11 @@
 
 .controls-container input[type="range"]:hover {
   opacity: 1;
+}
+
+.controls-container label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
 }

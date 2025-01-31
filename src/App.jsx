@@ -6,7 +6,7 @@ import Description from "./components/Description";
 import { bubbleSort } from "./algoritmos/bubbleSort";
 import { mergeSort } from "./algoritmos/mergeSort";
 import { quickSort } from "./algoritmos/quickSort";
-import "./App.css"; // Importando la hoja de estilo
+import "./App.css";
 
 const App = () => {
   const [array, setArray] = useState([]);

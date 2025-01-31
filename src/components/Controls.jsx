@@ -1,6 +1,7 @@
 // src/components/Controls.jsx
 import React from "react";
-import "./Controls.css";
+import "./Controls.css"; // Importando la hoja de estilo
+
 const Controls = ({
   onRandomize,
   onBubbleSort,
