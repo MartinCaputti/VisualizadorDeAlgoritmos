@@ -1,0 +1,29 @@
+/* src/components/ArrayVisualizer.css */
+.array-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 70vh; /* Ajustar la altura según necesidad */
+  margin: 20px 0;
+  background-color: #f0f0f0; /* Color de fondo para mejor contraste */
+}
+
+.array-bar {
+  width: 10px; /* Ajustar el ancho de las barras */
+  margin: 0 2px;
+  background-color: blue; /* Color por defecto de las barras */
+  transition: height 0.3s, background-color 0.3s; /* Transición suave */
+}
+
+/* src/components/Controls.css */
+.controls-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.controls-container button,
+.controls-container input {
+  margin: 5px;
+}
